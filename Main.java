@@ -3,27 +3,19 @@ package com.metanit;
 public class Main {
 
     public static void main(String[] args) {
-        getNewDate(28, 02, 2011);
+        int elements[] = {1, 3, 5, 8, 83, 12, 14, 16, 34, 56};
+        getLast(elements);
+        int lastIndex = getLast(elements);
+        System.out.println(lastIndex);
     }
 
-    public static void getNewDate(int day, int month, int year) {
-        int[] daysInMonth = {-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-        int nextDay = day;
-        int nextMonth = month;
-        int nextYear = year;
-        if (day == daysInMonth[month]) {
-            nextDay = 1;
-            nextMonth++;
-            if (month == 12) {
-                nextMonth = 1;
-                nextYear++;
-            }
+    public static int getLast(int[] array) {
+        int lastIndex = array[array.length - 1];
 
-        } else {
-            nextDay++;
-        }
-        System.out.println(nextDay + "." + nextMonth + "." + nextYear);
+
+        return lastIndex;
     }
-
-
 }
+
+
+
